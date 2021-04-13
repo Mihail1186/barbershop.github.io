@@ -1,21 +1,18 @@
 <?php
 $name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
+$textarea = $_POST['textarea'];
 
 
 $to = "@mail.ru";
 $date = date("d.m.Y");
 $time = date("h:i");
-$from = $email;
 $subject = "Заявка c сайта";
 
 
 $msg = "
     Имя: $name /n
-    Почта: $email /n
-    Телефон: $phone";
-mail($to, $subject, $msg, "From: $from ");
+    Сообщение: $textarea";
+mail($to, $subject, $msg);
 
 ?>
 
